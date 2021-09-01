@@ -1,11 +1,80 @@
-//quero somar 1 + 2 + 3 + ... + n
-function calculoRapidinho (numero){
-    return Promise.resolve ((numero * (numero + 1)) / 2)
-}
+// const axios = require('axios')
 
-calculoRapidinho(10000).then (res => {
-    console.log (res)
-})
+// const appid = 'ef0b0973b783e0614ac87612ec04344b'
+
+// const q = 'Itu'
+
+// const units = 'metric'
+
+// const lang = "pt_br"
+
+// const cnt = 10
+
+// const url = `https://api.openweathermap.org/data/2.5/forecast?q=${q}&units=${units}&appid=${appid}&lang=${lang}&cnt=${cnt}`
+
+// // console.log(url)
+
+// axios.get(url)
+//     .then(res => {
+//         //console.log(res)
+//         return res.data
+//     })
+//     .then(x => {
+//         //console.log("Quantidade: " + x.cnt)
+//         return x['list']
+//     })
+//     .then(res => {
+//         //console.log ("A lista: " + res)
+//         return res
+//     })
+//     .then(lista => {
+//         for (let previsao of lista) {
+//             //console.log("Previsao da vez: " + JSON.stringify(previsao))
+//             console.log(`
+//             ${new Date(+previsao.dt * 1000).toLocaleString()},
+//             Min: ${previsao['main']['temp_min']}\u00B0C,
+//             Max: ${previsao['main']['temp_max']}\u00B0C,
+//             Hum: ${previsao['main']['humidity']}%,
+//             ${previsao['weather'][0]['description']}
+//         `
+//             )
+//         }
+//         return lista
+//     })
+//     // .then(lista => { let count = 0; for (previsao of lista) { if (String(previsao['weather'][0]['description']).startsWith('c')) { count += 1; } } console.log(count) })
+//     // .then(lista => { let aux = 0; for (let i of lista) { if (i['weather'][0]['description'].substr(0, 1) === 'c') { aux += 1 } } console.log(aux) })
+//     .then (lista => {
+//         const aux = lista.filter (previsao => previsao['weather'][0]['description'].startsWith('c'))
+//         console.log (aux.length)
+//     })
+
+
+
+
+
+// //quero somar 1 + 2 + 3 + ... + n
+// function calculoRapidinho (numero){
+//     return numero >= 0 ?
+//     Promise.resolve ((numero * (numero + 1)) / 2)
+//     : Promise.reject ('Somente valores positivos, por favor')
+// }
+
+// calculoRapidinho(-1)
+// .then (res => {
+//     console.log(res)
+// })
+// .catch (erro => {
+//     console.log ("Erro: " + erro)
+// })
+
+
+// calculoRapidinho(10)
+// .then (res => {
+//     console.log (res)
+// })
+// .catch (erro => {
+//     console.log ("Erro: " + erro)
+// })
 
 
 
